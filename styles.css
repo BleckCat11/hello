@@ -1,0 +1,10 @@
+* {
+  background: lightgray;
+}
+.q {
+  width: 33%;
+  color: black;
+}
+.w {
+  display: none;
+}
