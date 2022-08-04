@@ -1,0 +1,28 @@
+*{
+    background-color: lightyellow;
+    margin: 5px;
+}
+div{
+    font-size: 20px;
+}
+.odd{
+    border: 1px solid black
+}
+.even{
+    font-style: italic;
+    color: blue; 
+}
+.div1{
+    background-color: lightgreen;
+}
+input{
+    width: 30px;
+}
+div div{
+    font-weight: bold
+}
+button{
+    background-color: lightblue;
+    border: 1px solid lightgreen;
+    border-radius: 25%;
+}
