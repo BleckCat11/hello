@@ -10,11 +10,12 @@ div{
 }
 .even{
     font-style: italic;
+}
+
+div.even input {
     color: blue; 
 }
-.div1{
-    background-color: lightgreen;
-}
+
 input{
     width: 30px;
 }
@@ -25,4 +26,7 @@ button{
     background-color: lightblue;
     border: 1px solid lightgreen;
     border-radius: 25%;
+}
+#div1{
+    background-color: lightgreen;
 }
