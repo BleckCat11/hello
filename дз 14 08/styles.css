@@ -1,0 +1,44 @@
+#q {
+  background-color: red;
+  width: 55px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+.w {
+  background-color: blue;
+  width: 75px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+.e {
+  background-color: purple;
+  width: 95px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+td {
+    border: 1px solid rgb(8, 8, 8);
+    width: 100px;
+    text-align: center;
+}
+a li  {
+background-color: rgb(28, 219, 28);
+width: 55px;
+/* margin:10px ; */
+border: 1px solid black;
+}
+#z{
+    background-color: rgb(124, 230, 83);
+}
+#x{
+    background-color: rgb(58, 117, 227);
+}
+#c{
+    background-color: pink;
+}
+#v{
+    background-color: rgb(15, 15, 169);
+}
+#b{
+    background-color: blueviolet;
+}
