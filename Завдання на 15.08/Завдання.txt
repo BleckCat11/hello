@@ -1,0 +1,9 @@
+1. Створити таблицю з картинки Таблиця.png. Для виконання завдання необхідно прочитати інформацію про table, tr, td, colspan та rowspan: 
+https://css.in.ua/html/tag/td
+https://cpto.dp.ua/public_html/posibnyky/basic_html/urok3-1.html (можна подивитися приклади)
+
+2. Створити 3 діви як на картинці Div1.png. За допомогою margin та padding створити результат як на картинках Div2.png та Div3.png
+https://idg.net.ua/blog/uchebnik-css/ispolzovanie-css/margin-i-padding
+Самостійно ознайомитися з padding-top, padding-right, padding-bottom, padding-left, margin-top, margin-right, margin-bottom и margin-left
+
+3. На наступний урок уміти пояснити різницю між margin та padding.
