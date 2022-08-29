@@ -22,6 +22,5 @@ function counting() {
       }
    
   }
-  alert (counter)
   document.getElementById("input2").value = counter
 }
