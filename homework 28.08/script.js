@@ -1,49 +1,45 @@
-function f5 (){
-    alert ("shdugks")
-    let max1 = 10;
-    let random1 = Math.floor(Math.random() * max1);
-    let max2 = 10;
-    let random2 = Math.floor(Math.random() * max2);
-    let max3 = 10;
-  let random3 = Math.floor(Math.random() * max3);
-let button = document.getElementById("button")
-  button[1].style.backgroundColor = 'rgb' (random3, random2, random1)
+// function f5 (){
+//     let max1 = 258;
+//     let random1 = Math.floor(Math.random() * max1);
+//     let max2 = 258;
+//     let random2 = Math.floor(Math.random() * max2);
+//     let max3 = 258;
+//   let random3 = Math.floor(Math.random() * max3);
+// let button = document.getElementById("button")
+//   button.style.backgroundColor = 'rgb(' + random1+',' + random2 + ',' + random3 + ')'
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+f4
+function nn (){
+    let nn = +getComputedStyle(document.body).zoom;
+    document.body.style.zoom = nn-0.5;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// f4
-// function nn (){
-//     let nn = +getComputedStyle(document.body).zoom;
-//     document.body.style.zoom = nn-.5;
-// }
-// function n(){
-//   let n = +getComputedStyle(document.body).zoom;
-//   document.body.style.zoom = n+0.5;
-// }
+function n(){
+  let n = +getComputedStyle(document.body).zoom;
+  document.body.style.zoom = n+0.5;
+}
 
 
 
