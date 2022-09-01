@@ -1,8 +1,8 @@
 function f4 (){
-  alert ("dhfhadskf")
+  
   let d = []
   while (i < 3){
-    alert ("fhjfjskdjhfjkadsf")
+
   let a = prompt()
   a.push(d)
 }
