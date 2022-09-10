@@ -1,0 +1,14 @@
+#div4 {
+   
+
+    position:absolute;
+    width:25px;
+    height:25px;
+    border:1px solid black;
+    background-color: hotpink;
+    
+}
+#div5 {
+    top: 1000px;
+    left: 1000px;
+}
