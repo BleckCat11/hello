@@ -128,14 +128,21 @@ function function31() {
 }
 
 function function4() {
-  let i = prompt();
+  let i;
+  do {
+    i = prompt();
+    let number = +i;
+    console.log(i)
+    console.log(number)
+  } while (i != 'q')
+
   let counter = 0;
-  i.addEventListener("keydown", function (e) {
-    if (e.key == "q") {
-      alert(counter);
-    } else {
-      let y = prompt;
-      counter = counter + y;
-    }
-  });
+  // i.addEventListener("keydown", function (e) {
+  //   if (e.key == "q") {
+  //     alert(counter);
+  //   } else {
+  //     let y = prompt;
+  //     counter = counter + y;
+  //   }
+  // });
 }
