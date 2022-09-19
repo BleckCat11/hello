@@ -30,17 +30,17 @@ function function2_bottom() {
   //правильно - bottom
   // також після "=" нема числа
   let div4 = document.getElementById("bottom");
- 
-    console.log("==============================");
-    console.log(document.getElementById("div4").style.top);
-    console.log("==============================");
-    // str.substring(0, str.length - 1);
 
-    let bottom = document.getElementById("div4").style.top;
-    let result = bottom.substring(0, bottom.length-2);
-    let result10 = +result + 10;
-    document.getElementById("div4").style.top = result10 + "px";
-  }
+  console.log("==============================");
+  console.log(document.getElementById("div4").style.top);
+  console.log("==============================");
+  // str.substring(0, str.length - 1);
+
+  let bottom = document.getElementById("div4").style.top;
+  let result = bottom.substring(0, bottom.length - 2);
+  let result10 = +result + 10;
+  document.getElementById("div4").style.top = result10 + "px";
+}
 function function2_top() {
   document.getElementById("div4").style.top = 10 + "px";
 }
@@ -87,16 +87,33 @@ function function4() {
   );
 }
 
-
-function classWorkWithautAnyFolder(){
- window.addEventListener (
- "click" ,
- function(e){
-  console.log(e)
-if(0){
-
-}
- }
-,false
- )
+classWorkWithautAnyFolder();
+function classWorkWithautAnyFolder() {
+  window.addEventListener(
+    "keydown",
+    function (e) {
+      if (e.key == "ArrowDown") {
+        let bottom = document.getElementById("div4").style.top;
+        let result = bottom.substring(0, bottom.length - 2);
+        let result10 = +result + 10;
+        document.getElementById("div4").style.top = result10 + "px";
+      } else if (e.key == "ArrowUp") {
+        let bottom = document.getElementById("div4").style.top;
+        let result = bottom.substring(0, bottom.length - 2);
+        let result10 = +result - 10;
+        document.getElementById("div4").style.top = result10 + "px";
+      } else if (e.key == "ArrowLeft") {
+        let bottom = document.getElementById("div4").style.left;
+        let result = bottom.substring(0, bottom.length - 2);
+        let result10 = +result - 10;
+        document.getElementById("div4").style.left = result10 + "px";
+      } else {
+        let bottom = document.getElementById("div4").style.left;
+        let result = bottom.substring(0, bottom.length - 2);
+        let result10 = +result + 10;
+        document.getElementById("div4").style.left = result10 + "px";
+      }
+    },
+    false
+  );
 }
