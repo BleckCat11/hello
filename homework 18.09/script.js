@@ -45,13 +45,22 @@ function function1() {
 }
 function2();
 function function2() {
-  let div1 = document.getElementById("div1");
-  div1.addEventListener(
-    "click",
+  let input1 = document.getElementById("input1");
+  input1.addEventListener(
+    "keyup",
     function (e) {
       let i = document.getElementById("input1").value;
       div1.style.height = i + "px";
-      console.log(e);
+      console.log(i + "px");
+    },
+    false
+  );
+  input1.addEventListener(
+    "keypress",
+    function (e) {
+      let i = document.getElementById("input1").value;
+      div1.style.height = i + "px";
+      console.log(i + "px");
     },
     false
   );
