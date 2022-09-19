@@ -1,3 +1,5 @@
+const colors = [0, 0, 0]
+
 function1();
 function function1() {
   window.addEventListener(
@@ -7,16 +9,36 @@ function function1() {
       let two = 0;
       let three = 0;
       if (e.key == "Shift") {
-        one = 125;
+        colors[0] = 125;
       }
       if (e.key == "CapsLock") {
-        two = 125;
+        colors[1] = 125;
       }
       if (e.key == "A") {
-        three = 125;
+        colors[2] = 125;
       }
       document.body.style.backgroundColor =
-        "rgb(" + one + "," + two + "," + three + ")";
+        "rgb(" + colors[0] + "," + colors[1] + "," + colors[2] + ")";
+    },
+    false
+  );
+  window.addEventListener(
+    "keyup",
+    function (e) {
+      let one = 0;
+      let two = 0;
+      let three = 0;
+      if (e.key == "Shift") {
+        colors[0] = 0;
+      }
+      if (e.key == "CapsLock") {
+        colors[1] = 0;
+      }
+      if (e.key == "A") {
+        colors[2] = 0;
+      }
+      document.body.style.backgroundColor =
+        "rgb(" + colors[0] + "," + colors[1] + "," + colors[2] + ")";
     },
     false
   );
