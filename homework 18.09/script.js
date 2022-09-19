@@ -1,5 +1,7 @@
 const colors = [0, 0, 0]
 
+let counter = 0
+
 function1();
 function function1() {
   window.addEventListener(
@@ -146,3 +148,36 @@ function function4() {
   //   }
   // });
 }
+
+
+
+
+//Методи масивів
+
+//push - додати елемент в масив в кінець
+//unshift - додати елемент в масив в початок
+//pop - відрізає останній елемент в масиві
+//shift - відрізає перший елемент в масиві
+//splice - вирізає якусь частину з масива +string
+//slice - вирізає якусь частину з масива (start, end) +string
+//indexOf - знаходить номер елементу в масиві +string
+//concat - з'єднати кілька масивів
+
+const arr = [1, 2, 3, 4, 5];
+const arr2 = [6, 7]
+
+document.getElementById('q213213').addEventListener('click',function () {
+  console.log('-------------------')
+  console.log(arr, "arr")
+  // const indexOf4 = arr.indexOf(3)
+
+  const lastItem = arr.splice(-1, 1)
+  const newArr = arr.concat(arr2)
+  //lastItem = [2, 3, 4, 5]
+  console.log(lastItem, "lastItem")
+  //arr = [1]
+  console.log(arr, "arr")
+  console.log('-------------------')
+}, false)
+
+console.log(arr)
