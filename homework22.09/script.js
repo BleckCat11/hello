@@ -36,3 +36,25 @@ function8()
 function function8 (){
 
 }
+
+disappear()
+function disappear() {
+  const btn = document.getElementById('byebye');
+  btn.addEventListener('click', function() {
+    btn.remove();
+  });
+}
+
+function hello() {
+  alert("Hello")
+}
+
+function bye() {
+  alert("Bye")
+}
+
+
+const arr = [111, 212, 32, 424, 5];
+
+// alert(f.substring(0, f.indexOf(' ', 2)))
+// const sortedArray = arr.sort((a, b) => a - b)
