@@ -27,7 +27,7 @@ function function2() {
   button.addEventListener(
     "click",
     function () {
-      for (let i ; i < arr.length; i++) {
+      for (let i ; i < arr.length; i++) { //У циклі треба задати початкове значення для i. У даному випадку у тебе i - undefined. for (let i = 0....)
         if (document.getElementById("input1") == arr[i]) {
           arr.slice(i,i)
         } else{
@@ -38,3 +38,6 @@ function function2() {
     false
   );
 }
+
+//А де задачки 9, 10, 13, 14, 15?
+//Також прохання: якщо у задачі задано масив, назву функції, назви змінних і так далі, то використовуй їх, будь ласка.
