@@ -1,0 +1,8 @@
+1. Створити кнопку. Створити три інпути. У перший юзер вводить ім'я, у другий - прізвище, у третій - вік. Створити функцію createObject(name, surname, age), яка буде створювати об'єкт з 3 ключами name, surname, age. 
+Створити масив objects на глобальному рівні (тобто не в функції, а за усіма функціями). При натисканні на кнопку у масив повинен відправлятися об'єкт з полями, що ввів користувач.
+
+2. Якщо кількість об'єктів у масиві стала 5, то надрукувати у дів усі об'єкти.
+
+3. Самостійно ознайомитися з for...in та Object.keys(). 
+https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/for...in
+https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
