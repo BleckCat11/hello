@@ -37,4 +37,3 @@ function changeColor() {
     alert("Такого кольору немає");
   }
 }
-
