@@ -1,0 +1,20 @@
+
+.container {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.result {
+    width: 20%;
+    height: 20px;
+    border: 3px solid black;
+}
+
+#enteredNumber {
+    width: 20%;
+    background-color: rgb(228, 156, 156);
+}
