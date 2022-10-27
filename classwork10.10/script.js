@@ -95,17 +95,38 @@ function reversWord() {
   presentResult(result);
 }
 
+function createArrayFrom0(max) {
+  const arr = [];
+  for (let i = 0; i < max; i++) {
+    arr.push(i);
+  }
+  return arr;
+}
+
 function randomPartWord() {
   let word1 = "";
-  for (let i = 0; i < word.length; i ++){
   let max = word.length;
-  let random = Math.floor(Math.random() * max);
-  word1 = word1 + word[random]
-  
-}
-presentResult(word1)
+  for (let i = 0; i < word.length; i ++) {
+    let random = Math.floor(Math.random() * max);
+    word1 = word1 + word[random]
+
+  }
+
+  presentResult(word1)
 }
 
 function JounWithDollar (){
   word.split("").join("$")
+}
+
+function createObjectFromWord(word) {
+  const obj = {};
+  for (const letter of word) {
+    if (Object.keys(obj).indexOf(letter) == -1) {
+      obj[letter] = 1;
+    } else {
+      obj[letter] = obj[letter] + 1;
+    }
+  }
+  return obj;
 }
