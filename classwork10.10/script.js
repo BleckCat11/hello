@@ -1,11 +1,11 @@
-let word;
+let word = "";
+const vowels = ["e", "y", "u", "i", "o", "a"];
 document.getElementById("input1").addEventListener("keyup", changedWord, false);
 let allButtons = document.getElementsByName("buttonsOfChooseOption");
 for (let button of allButtons) {
   button.addEventListener(
     "click",
     function (e) {
-      console.log(e.target.id);
       chooseOption(e.target.id);
     },
     false
@@ -26,18 +26,27 @@ function changedWord() {
 function chooseOption(choosenButton) {
   if (choosenButton == "wordLength") {
     getLength();
-  } else if (choosenButton == "howManyLetters_o") {
-    countLettersO()
+  }else if (choosenButton == "randomPartWord"){
+    randomPartWord()
   }
-  else if (choosenButton == "wordIsEvenOrOdd"){
-    isWordLengthEven()
-  }
-  else{
-    sortLettersOfWord()
+  else if (choosenButton == "howManyLetters_o") {
+    countLettersO();}
+
+   else if (choosenButton == "JounWithDollar") {
+    JounWithDollar();
+  } else if (choosenButton == "wordIsEvenOrOdd") {
+    isWordLengthEven();
+  } else if (choosenButton == "vowelsAndConsonants") {
+    vowelsAndConsonants();
+  } else if (choosenButton == "reversWord") {
+    reversWord();
+  } else {
+    sortLettersOfWord();
   }
 }
 function getLength() {
-  document.getElementById("result").innerHTML = word.length;
+  let wordLength = word.length;
+  presentResult(wordLength);
 }
 function countLettersO() {
   let counter = 0;
@@ -46,20 +55,57 @@ function countLettersO() {
       counter++;
     }
   }
-  document.getElementById("result").innerHTML = counter;
+  presentResult(counter);
 }
 function isWordLengthEven() {
-if (word.length % 2 == true){
-  document.getElementById("result").innerHTML = "odd";
-}else {
-  document.getElementById("result").innerHTML = "even";
-}
+  let finalResult = "";
+  if (word.length % 2) {
+    finalResult = "odd";
+  } else {
+    finalResult = "even";
+  }
+  presentResult(finalResult);
 }
 function sortLettersOfWord() {
-  let allLetters = []
+  let allLetters = [];
   for (let i = 0; i < word.length; i++) {
-    allLetters.push(word[i])
-  } 
-  let sortAllLetters = allLetters.sort()
-  document.getElementById("result").innerHTML = sortAllLetters
+    allLetters.push(word[i]);
+  }
+  let sortAllLetters = allLetters.sort();
+  presentResult(sortAllLetters);
+}
+
+function vowelsAndConsonants() {
+  let counterVawels = 0;
+  for (let i = 0; i < word.length; i++) {
+    if (vowels.indexOf(word[i]) != -1) {
+      counterVawels++;
+    }
+  }
+  presentResult(
+    `Vawels: ${counterVawels} , consonants: ${word.length - counterVawels}`
+  );
+}
+
+function presentResult(result) {
+  document.getElementById("result").innerHTML = result;
+}
+function reversWord() {
+  let result = word.split("").reverse().join("");
+  presentResult(result);
+}
+
+function randomPartWord() {
+  let word1 = "";
+  for (let i = 0; i < word.length; i ++){
+  let max = word.length;
+  let random = Math.floor(Math.random() * max);
+  word1 = word1 + word[random]
+  
+}
+presentResult(word1)
+}
+
+function JounWithDollar (){
+  word.split("").join("$")
 }

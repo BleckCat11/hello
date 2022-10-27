@@ -28,3 +28,24 @@ function createStudent(name, surname, age) {
 function showStudents() {
     console.log(students)
 }
+
+
+
+
+
+
+
+
+function findingDistentstFromTwoPoints (){
+    let coordinateX = +document.getElementById("coordinateX").value
+    let coordinateY = +document.getElementById("coordinateY").value
+    createPoint(coordinateX, coordinateY)
+}
+
+
+
+function createPoint (x, y){
+let result = Math.sqrt((x * x) + (y * y))
+alert (result)
+}
+
