@@ -129,3 +129,19 @@ function nearestSimpleNumber() {
     return;
   }
 }
+
+function numberInHighestDigitPow () {
+
+}
+
+function reverseNumber () {
+//without reverse function !!!
+}
+
+function mostRepeatedDigit () {
+
+}
+
+function uniqueDigits () {
+
+}
