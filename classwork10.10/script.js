@@ -116,6 +116,7 @@ function randomPartWord() {
 }
 
 function JounWithDollar (){
+<<<<<<< Updated upstream
   word.split("").join("$")
 }
 
@@ -130,3 +131,8 @@ function createObjectFromWord(word) {
   }
   return obj;
 }
+=======
+  let wordA = word.split("").join("$")
+  presentResult(wordA)
+}
+>>>>>>> Stashed changes
