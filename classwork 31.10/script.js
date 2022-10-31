@@ -36,6 +36,17 @@ function sumOfAllNumbers() {
   let result = 0;
   let stringNumber = String(number);
   for (let i of stringNumber) {
+
+
+
+
+
+
+
+
+
+
+
     result = result + Number(i);
   }
   enterResult(id, result);
@@ -94,7 +105,16 @@ function maxMultiplicationOfThreeNumbers() {
   enterResult(id, result);
 }
 
-function sumOfNumbersAtOddPlaces() { }
+function sumOfNumbersAtOddPlaces() { 
+    let id = "task6";
+  let result = 0;
+  let stringNumber = String(number);
+  for (let i = 0 ; i< stringNumber.length; i = i+ 2) {
+    result = result + +stringNumber[i]
+  }
+  enterResult(id, result);
+
+}
 
 function sqrtRounded() { }
 
