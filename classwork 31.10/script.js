@@ -13,10 +13,10 @@ function callFunctions() {
   sortAsc();
   sortDesc();
   maxNumber();
-//   maxMultiplicationOfThreeNumbers();
+  maxMultiplicationOfThreeNumbers();
   sumOfNumbersAtOddPlaces();
   sqrtRounded();
-  nearestSimpleNumber();
+  // nearestSimpleNumber();
 }
 
 //Функція для оновлення введеного числа користувачем
@@ -66,7 +66,7 @@ function sortDesc() {
 }
 
 function maxNumber() {
-   let id = "task4"
+  let id = "task4"
   let stringNumber = String(number);
   let max = 0;
   for (let i of stringNumber) {
@@ -78,29 +78,32 @@ function maxNumber() {
 }
 
 function maxMultiplicationOfThreeNumbers() {
-   let id = "task5"
-   let max1 = 0
-   let max2 = 0
-   let max3 = 0
-   let stringNumber = String(number);
-   for (let i of stringNumber) {
-if (i > max1){
-    max1 = i
+  let id = "task5"
+  let maxNumbers = [0, 0, 0];
+  let stringNumber = String(number);
+  for (let number of stringNumber) {
+    for (let i = 0; i < maxNumbers.length; i++) {
+      if (number > maxNumbers[i]) {
+        maxNumbers[i] = +number;
+        maxNumbers = maxNumbers.sort();
+        break;
+      }
+    }
+  }
+  let result = maxNumbers.reduce((sum, acc) => sum * acc, 1);
+  enterResult(id, result);
 }
 
-}
-}
+function sumOfNumbersAtOddPlaces() { }
 
-function sumOfNumbersAtOddPlaces() {}
-
-function sqrtRounded() {}
+function sqrtRounded() { }
 
 function nearestSimpleNumber() {
   let id = "task8";
   let stringNumber = String(number);
   for (let i of stringNumber) {
   }
-  for (let j = 2; j < i; j++) {}
+  for (let j = 2; j < i; j++) { }
   if (i % j == 0) {
     enterResult(id, i);
     return;
