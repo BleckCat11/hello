@@ -4,7 +4,7 @@ let number = document.getElementById("enteredNumber").value.length
 
 document
   .getElementById("enteredNumber")
-  .addEventListener("keydown", callFunctions, false);
+  .addEventListener("keyup", callFunctions, false);
 
 //Фкнція виклику усіх функцій після зміни числа
 function callFunctions() {
@@ -13,7 +13,7 @@ function callFunctions() {
   sortAsc();
   sortDesc();
   maxNumber();
-  maxMultiplicationOfThreeNumbers();
+//   maxMultiplicationOfThreeNumbers();
   sumOfNumbersAtOddPlaces();
   sqrtRounded();
   nearestSimpleNumber();
@@ -28,21 +28,21 @@ function updateNumber() {
 
 // Функція для виведення результату у дів. Приймає в себе ід.
 function enterResult(id, result) {
-  document.getElementById(id).value = +result;
+  document.getElementById(id).innerHTML = result;
 }
 
 function sumOfAllNumbers() {
   let id = "task1";
+  let result = 0;
   let stringNumber = String(number);
   for (let i of stringNumber) {
-    let result = 0;
-    result = result + i;
-    enterResult(id, result);
+    result = result + Number(i);
   }
+  enterResult(id, result);
 }
 
 function sortAsc() {
-  let id = "task3";
+  let id = "task2";
   let arr = [];
   let stringNumber = String(number);
   for (let i of stringNumber) {
@@ -66,30 +66,29 @@ function sortDesc() {
 }
 
 function maxNumber() {
+   let id = "task4"
   let stringNumber = String(number);
   let max = 0;
   for (let i of stringNumber) {
     if (i > max) {
-      max == max - max + i;
+      max = i;
     }
   }
   enterResult(id, max);
 }
 
 function maxMultiplicationOfThreeNumbers() {
-  let counter = 0;
-  let stringNumber = String(number);
-  let max = 0;
-  while (counter != 3) {
-    for (let i of stringNumber) {
-      if (i > max) {
-        max == max - max + i;
-        stringNumber.slice(i, i - 1);
-      }
-      counter++;
-    }
-  }
-  enterResult(id, max);
+   let id = "task5"
+   let max1 = 0
+   let max2 = 0
+   let max3 = 0
+   let stringNumber = String(number);
+   for (let i of stringNumber) {
+if (i > max1){
+    max1 = i
+}
+
+}
 }
 
 function sumOfNumbersAtOddPlaces() {}
