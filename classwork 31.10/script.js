@@ -16,7 +16,11 @@ function callFunctions() {
   maxMultiplicationOfThreeNumbers();
   sumOfNumbersAtOddPlaces();
   sqrtRounded();
-  // nearestSimpleNumber();
+ nearestSimpleNumber();
+ numberInHighestDigitPow()
+ reverseNumber()
+ mostRepeatedDigit()
+ uniqueDigits()
 }
 
 //Функція для оновлення введеного числа користувачем
@@ -36,17 +40,6 @@ function sumOfAllNumbers() {
   let result = 0;
   let stringNumber = String(number);
   for (let i of stringNumber) {
-
-
-
-
-
-
-
-
-
-
-
     result = result + Number(i);
   }
   enterResult(id, result);
@@ -116,30 +109,47 @@ function sumOfNumbersAtOddPlaces() {
 
 }
 
-function sqrtRounded() { }
+function sqrtRounded() { 
+  let id = "task7"
+let Halfresult = Math.sqrt(number)
+let result = Halfresult.toFixed(2)
+
+  enterResult(id, result);
+
+}
 
 function nearestSimpleNumber() {
   let id = "task8";
-  let stringNumber = String(number);
-  for (let i of stringNumber) {
-  }
-  for (let j = 2; j < i; j++) { }
-  if (i % j == 0) {
-    enterResult(id, i);
-    return;
-  }
+  
 }
 
 function numberInHighestDigitPow () {
-
+let id = "task9"
+let stringNumber = String(number);
+let maxNumber = 0;
+for (let i of stringNumber) {
+  if (i > maxNumber) {
+    maxNumber = i;
+  }
+}
+let result = Math.pow(number, maxNumber)
+enterResult(id, result);
 }
 
 function reverseNumber () {
+  let id = "task10"
+  let result = []
+  let stringNumber = String(number);
 //without reverse function !!!
+for (let i = stringNumber.length - 1; i >= 0; i--) {
+result.push(stringNumber[i])
+}
+let Iresult = result.join("")
+enterResult(id, Iresult)
 }
 
 function mostRepeatedDigit () {
-
+  let stringNumber = String(number);
 }
 
 function uniqueDigits () {
