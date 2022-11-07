@@ -16,11 +16,11 @@ function callFunctions() {
   maxMultiplicationOfThreeNumbers();
   sumOfNumbersAtOddPlaces();
   sqrtRounded();
- nearestSimpleNumber();
- numberInHighestDigitPow()
- reverseNumber()
- mostRepeatedDigit()
- uniqueDigits()
+  nearestSimpleNumber();
+  numberInHighestDigitPow();
+  reverseNumber();
+  mostRepeatedDigit();
+  uniqueDigits();
 }
 
 //Функція для оновлення введеного числа користувачем
@@ -70,7 +70,7 @@ function sortDesc() {
 }
 
 function maxNumber() {
-  let id = "task4"
+  let id = "task4";
   let stringNumber = String(number);
   let max = 0;
   for (let i of stringNumber) {
@@ -82,7 +82,7 @@ function maxNumber() {
 }
 
 function maxMultiplicationOfThreeNumbers() {
-  let id = "task5"
+  let id = "task5";
   let maxNumbers = [0, 0, 0];
   let stringNumber = String(number);
   for (let number of stringNumber) {
@@ -98,60 +98,68 @@ function maxMultiplicationOfThreeNumbers() {
   enterResult(id, result);
 }
 
-function sumOfNumbersAtOddPlaces() { 
-    let id = "task6";
+function sumOfNumbersAtOddPlaces() {
+  let id = "task6";
   let result = 0;
   let stringNumber = String(number);
-  for (let i = 0 ; i< stringNumber.length; i = i+ 2) {
-    result = result + +stringNumber[i]
+  for (let i = 0; i < stringNumber.length; i = i + 2) {
+    result = result + +stringNumber[i];
   }
   enterResult(id, result);
-
 }
 
-function sqrtRounded() { 
-  let id = "task7"
-let Halfresult = Math.sqrt(number)
-let result = Halfresult.toFixed(2)
+function sqrtRounded() {
+  let id = "task7";
+  let Halfresult = Math.sqrt(number);
+  let result = Halfresult.toFixed(2);
 
   enterResult(id, result);
-
 }
 
 function nearestSimpleNumber() {
   let id = "task8";
-  
 }
 
-function numberInHighestDigitPow () {
-let id = "task9"
-let stringNumber = String(number);
-let maxNumber = 0;
-for (let i of stringNumber) {
-  if (i > maxNumber) {
-    maxNumber = i;
+function numberInHighestDigitPow() {
+  let id = "task9";
+  let stringNumber = String(number);
+  let maxNumber = 0;
+  for (let i of stringNumber) {
+    if (i > maxNumber) {
+      maxNumber = i;
+    }
   }
-}
-let result = Math.pow(number, maxNumber)
-enterResult(id, result);
+  let result = Math.pow(number, maxNumber);
+  enterResult(id, result);
 }
 
-function reverseNumber () {
-  let id = "task10"
-  let result = []
+function reverseNumber() {
+  let id = "task10";
+  let result = [];
   let stringNumber = String(number);
-//without reverse function !!!
-for (let i = stringNumber.length - 1; i >= 0; i--) {
-result.push(stringNumber[i])
-}
-let Iresult = result.join("")
-enterResult(id, Iresult)
+  //without reverse function !!!
+  for (let i = stringNumber.length - 1; i >= 0; i--) {
+    result.push(stringNumber[i]);
+  }
+  let Iresult = result.join("");
+  enterResult(id, Iresult);
 }
 
-function mostRepeatedDigit () {
+function mostRepeatedDigit() {
   let stringNumber = String(number);
 }
 
-function uniqueDigits () {
-
+function uniqueDigits() {
+  let id = "task12";
+  let arreyOfSpecialNumbers = [];
+  let stringNumber = String(number);
+  for (let i of stringNumber) {
+    for (let j = 0; j< arreyOfSpecialNumbers.length; j ++) {
+      if (arreyOfSpecialNumbers[j] == i) {
+      } else {
+        arreyOfSpecialNumbers.push(i);
+      }
+    }
+  }
+  enterResult(id, arreyOfSpecialNumbers);
 }
