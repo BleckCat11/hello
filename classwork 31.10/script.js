@@ -163,3 +163,11 @@ function uniqueDigits() {
   }
   enterResult(id, arreyOfSpecialNumbers);
 }
+
+function getDivisors() {
+
+}
+
+function closestDividendTo3() {
+
+}
