@@ -171,3 +171,15 @@ function getDivisors() {
 function closestDividendTo3() {
 
 }
+
+function strangeTaskAboutEvenNumber() {
+
+}
+
+function strangeTaskAboutOddNumber() {
+
+}
+
+function isNumberSimple() {
+
+}
