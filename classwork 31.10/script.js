@@ -23,6 +23,8 @@ function callFunctions() {
   uniqueDigits();
   getDivisors()
   closestDividendTo3()
+  strangeTaskAboutEvenNumber()
+  isNumberSimple()
 }
 
 //Функція для оновлення введеного числа користувачем
