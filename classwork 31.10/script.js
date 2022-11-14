@@ -19,8 +19,10 @@ function callFunctions() {
   nearestSimpleNumber();
   numberInHighestDigitPow();
   reverseNumber();
-  mostRepeatedDigit();
+  // mostRepeatedDigit();
   uniqueDigits();
+  getDivisors()
+  closestDividendTo3()
 }
 
 //Функція для оновлення введеного числа користувачем
@@ -145,34 +147,79 @@ function reverseNumber() {
   enterResult(id, Iresult);
 }
 
-function mostRepeatedDigit() {
-  let stringNumber = String(number);
-}
+// function mostRepeatedDigit() {
+//   let stringNumber = String(number);
+//   let allNumber = {
+//   }
+//   for (let i of stringNumber) {
+// let istr = String(i)
+// let allNumberAndI = allNumber.indexOf(i)
+// if (allNumberAndI == -1){
+//   allNumber.i = i
+// }
+// else{
+//   allNumber.i ++
+// }
+//   }
+// }
 
 function uniqueDigits() {
   let id = "task12";
   let arreyOfSpecialNumbers = [];
   let stringNumber = String(number);
   for (let i of stringNumber) {
-    for (let j = 0; j< arreyOfSpecialNumbers.length; j ++) {
-      if (arreyOfSpecialNumbers[j] == i) {
-      } else {
-        arreyOfSpecialNumbers.push(i);
-      }
-    }
+    let lookingForSpecialNumber = arreyOfSpecialNumbers.indexOf(i)
+if (lookingForSpecialNumber == -1){
+  arreyOfSpecialNumbers.push(i)
+}
   }
-  enterResult(id, arreyOfSpecialNumbers);
+  enterResult(id, arreyOfSpecialNumbers.join(""));
 }
 
 function getDivisors() {
-
+let id = "task13"
+let counter = []
+for (let i = 0; i < number; i++){
+  if (number % i == 0){
+    counter.push(i)
+  }
+}
+counter.push(number)
+enterResult(id, counter)
 }
 
 function closestDividendTo3() {
+  let stringNumber = String(number);
+  let id = "task14"
+  if (number <= 3){
+    enterResult(id, 3)
+  }else {
+    for (let i = number; i >= 0; i--) {
+      if (i % 3 == 0){
+        enterResult(id, i)
+        console.log (i)
+        return
+      }
+    } 
+  }
+  }
 
-}
+
 
 function strangeTaskAboutEvenNumber() {
+  let stringNumber = String(number);
+  let id = "task15"
+if (number % 2 == 0){
+if (number.length % 2 == 0){
+let firstPart  = stringNumber.slice(0, number.length % 2)
+let lastPart = stringNumber.slice(number.length % 2, -1)
+let result = +firstPart / +lastPart
+enterResult(id , result)
+}else{return
+}
+}else{return
+}
+  
 
 }
 
@@ -181,5 +228,18 @@ function strangeTaskAboutOddNumber() {
 }
 
 function isNumberSimple() {
+  let id = "task17"
+  let counter = []
+  for (let i = 0; i < number; i++){
+    if (number % i == 0){
+      counter.push(i)
+    }
+  }
+  counter.push(number)
+  if (counter.length > 2){
+    enterResult(id, "складене")
+  }else {
+    enterResult(id, "просте")
+  }
 
-}
+  }
