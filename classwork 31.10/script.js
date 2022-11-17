@@ -246,3 +246,11 @@ function isNumberSimple() {
   }
 
 }
+
+function factorial() {
+
+}
+
+function sumOfAllInputs() {
+  
+}
