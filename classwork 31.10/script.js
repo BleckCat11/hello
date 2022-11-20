@@ -25,6 +25,9 @@ function callFunctions() {
   closestDividendTo3()
   strangeTaskAboutEvenNumber()
   isNumberSimple()
+  strangeTaskAboutOddNumber()
+  factorial()
+  sumOfAllInputs()
 }
 
 //Функція для оновлення введеного числа користувачем
@@ -200,7 +203,6 @@ function closestDividendTo3() {
     for (let i = number; i >= 0; i--) {
       if (i % 3 == 0) {
         enterResult(id, i)
-        console.log(i)
         return
       }
     }
@@ -219,6 +221,7 @@ function strangeTaskAboutEvenNumber() {
       let result = +firstPart / +lastPart
       enterResult(id, result)
     } else {
+      enterResult(id, " ")
       return
     }
   // } else {
@@ -227,7 +230,18 @@ function strangeTaskAboutEvenNumber() {
 }
 
 function strangeTaskAboutOddNumber() {
-
+  let stringNumber = String(number);
+  let id = "task16"
+  if (number.length % 2 == 1) {
+    let midleNumber = (number.length -1) / 2
+    let finalMidelNumber = stringNumber.slice(midleNumber, midleNumber + 1)
+    let firstPart = stringNumber.slice(0, (number.length-1) / 2)
+    let lastPart = stringNumber.slice((number.length + 1)  / 2, number.length)
+    let result = Math.pow(firstPart * lastPart, finalMidelNumber)
+    enterResult(id, result)
+  } else {
+    return
+  }
 }
 
 function isNumberSimple() {
@@ -248,9 +262,23 @@ function isNumberSimple() {
 }
 
 function factorial() {
-
+  let counter = 1
+  let id = "task18"
+if (number <= 10){
+for (let i = number; i != 0; i--){
+  counter = counter * i
+}
+}
+console.log("fdsafadsf")
+enterResult(id, counter)
 }
 
 function sumOfAllInputs() {
-  
+  let id = "task20";
+  let result = 0;
+  let allInputs = document.getElementsByClassName("result")
+  for (let i of allInputs) {
+    result = result + i.value;
+  }
+  enterResult(id, result);
 }
