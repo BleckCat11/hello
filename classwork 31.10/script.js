@@ -21,13 +21,13 @@ function callFunctions() {
   reverseNumber();
   // mostRepeatedDigit();
   uniqueDigits();
-  getDivisors()
-  closestDividendTo3()
-  strangeTaskAboutEvenNumber()
-  isNumberSimple()
-  strangeTaskAboutOddNumber()
-  factorial()
-  sumOfAllInputs()
+  getDivisors();
+  closestDividendTo3();
+  strangeTaskAboutEvenNumber();
+  isNumberSimple();
+  strangeTaskAboutOddNumber();
+  factorial();
+  sumOfAllInputs();
 }
 
 //Функція для оновлення введеного числа користувачем
@@ -173,57 +173,55 @@ function uniqueDigits() {
   let arreyOfSpecialNumbers = [];
   let stringNumber = String(number);
   for (let i of stringNumber) {
-    let lookingForSpecialNumber = arreyOfSpecialNumbers.indexOf(i)
+    let lookingForSpecialNumber = arreyOfSpecialNumbers.indexOf(i);
     if (lookingForSpecialNumber == -1) {
-      arreyOfSpecialNumbers.push(i)
+      arreyOfSpecialNumbers.push(i);
     }
   }
   enterResult(id, arreyOfSpecialNumbers.join(""));
 }
 
 function getDivisors() {
-  let id = "task13"
-  let counter = []
+  let id = "task13";
+  let counter = [];
   for (let i = 0; i <= number; i++) {
     if (number % i == 0) {
-      counter.push(i)
+      counter.push(i);
     }
   }
   // counter.push(number)
-  enterResult(id, counter)
+  enterResult(id, counter);
 }
 
 //Зробити, щоб знаходило по прикладу: якщо 8 - то найближче, що ділиться на 3 - 9, якщо 7 - то 6.
 function closestDividendTo3() {
   let stringNumber = String(number);
-  let id = "task14"
+  let id = "task14";
   if (number <= 3) {
-    enterResult(id, 3)
+    enterResult(id, 3);
   } else {
     for (let i = number; i >= 0; i--) {
       if (i % 3 == 0) {
-        enterResult(id, i)
-        return
+        enterResult(id, i);
+        return;
       }
     }
   }
 }
 
-
-
 function strangeTaskAboutEvenNumber() {
   let stringNumber = String(number);
-  let id = "task15"
+  let id = "task15";
   // if (number % 2 == 0) {
-    if (number.length % 2 == 0) {
-      let firstPart = stringNumber.slice(0, number.length / 2)
-      let lastPart = stringNumber.slice(number.length / 2, number.length)
-      let result = +firstPart / +lastPart
-      enterResult(id, result)
-    } else {
-      enterResult(id, " ")
-      return
-    }
+  if (number.length % 2 == 0) {
+    let firstPart = stringNumber.slice(0, number.length / 2);
+    let lastPart = stringNumber.slice(number.length / 2, number.length);
+    let result = +firstPart / +lastPart;
+    enterResult(id, result);
+  } else {
+    enterResult(id, " ");
+    return;
+  }
   // } else {
   //   return
   // }
@@ -231,54 +229,62 @@ function strangeTaskAboutEvenNumber() {
 
 function strangeTaskAboutOddNumber() {
   let stringNumber = String(number);
-  let id = "task16"
+  let id = "task16";
   if (number.length % 2 == 1) {
-    let midleNumber = (number.length -1) / 2
-    let finalMidelNumber = stringNumber.slice(midleNumber, midleNumber + 1)
-    let firstPart = stringNumber.slice(0, (number.length-1) / 2)
-    let lastPart = stringNumber.slice((number.length + 1)  / 2, number.length)
-    let result = Math.pow(firstPart * lastPart, finalMidelNumber)
-    enterResult(id, result)
+    let midleNumber = (number.length - 1) / 2;
+    let finalMidelNumber = stringNumber.slice(midleNumber, midleNumber + 1);
+    let firstPart = stringNumber.slice(0, (number.length - 1) / 2);
+    let lastPart = stringNumber.slice((number.length + 1) / 2, number.length);
+    let result = Math.pow(firstPart * lastPart, finalMidelNumber);
+    enterResult(id, result);
   } else {
-    return
+    return;
   }
 }
 
 function isNumberSimple() {
-  let id = "task17"
-  let counter = []
+  let id = "task17";
+  let counter = [];
   for (let i = 0; i < number; i++) {
     if (number % i == 0) {
-      counter.push(i)
+      counter.push(i);
     }
   }
-  counter.push(number)
+  counter.push(number);
   if (counter.length > 2) {
-    enterResult(id, "складене")
+    enterResult(id, "складене");
   } else {
-    enterResult(id, "просте")
+    enterResult(id, "просте");
   }
-
 }
 
 function factorial() {
-  let counter = 1
-  let id = "task18"
-if (number <= 10){
-for (let i = number; i != 0; i--){
-  counter = counter * i
-}
-}
-console.log("fdsafadsf")
-enterResult(id, counter)
+  let counter = 1;
+  let id = "task18";
+  if (number <= 10) {
+    for (let i = number; i != 0; i--) {
+      counter = counter * i;
+    }
+  }
+  console.log("fdsafadsf");
+  enterResult(id, counter);
 }
 
 function sumOfAllInputs() {
   let id = "task20";
   let result = 0;
-  let allInputs = document.getElementsByClassName("result")
+  let allInputs = document.getElementsByClassName("result");
   for (let i of allInputs) {
-    result = result + i.value;
+    if (isNaN(+i.innerHTML) == false) {
+      result = result + +i.innerHTML;
+    } else {
+      if (i.innerHTML.indexOf(",") != -1) {
+        let itIsAlreadyArray = i.innerHTML.split(",");
+        for (let j = 0; j < itIsAlreadyArray.length; j++) {
+          result = result + j;
+        }
+      }
+    }
   }
   enterResult(id, result);
 }
