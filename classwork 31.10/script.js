@@ -152,21 +152,17 @@ function reverseNumber() {
   enterResult(id, Iresult);
 }
 
-// function mostRepeatedDigit() {
-//   let stringNumber = String(number);
-//   let allNumber = {
-//   }
-//   for (let i of stringNumber) {
-// let istr = String(i)
-// let allNumberAndI = allNumber.indexOf(i)
-// if (allNumberAndI == -1){
-//   allNumber.i = i
-// }
-// else{
-//   allNumber.i ++
-// }
-//   }
-// }
+function mostRepeatedDigit() {
+  let id = "task11";
+  let stringNumber = String(number);
+  let result = {};
+  let mostRepeatedNumber = 0;
+  for (let number of stringNumber) {
+    result[number] = result[number] + 1 || 1;
+  }
+  console.log(result)
+  enterResult(id, mostRepeatedNumber);
+}
 
 function uniqueDigits() {
   let id = "task12";
