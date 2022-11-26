@@ -19,7 +19,7 @@ function callFunctions() {
   nearestSimpleNumber();
   numberInHighestDigitPow();
   reverseNumber();
-  // mostRepeatedDigit();
+  mostRepeatedDigit();
   uniqueDigits();
   getDivisors();
   closestDividendTo3();
@@ -212,7 +212,6 @@ function closestDividendTo3() {
 function strangeTaskAboutEvenNumber() {
   let stringNumber = String(number);
   let id = "task15";
-  // if (number % 2 == 0) {
   if (number.length % 2 == 0) {
     let firstPart = stringNumber.slice(0, number.length / 2);
     let lastPart = stringNumber.slice(number.length / 2, number.length);
@@ -222,9 +221,6 @@ function strangeTaskAboutEvenNumber() {
     enterResult(id, " ");
     return;
   }
-  // } else {
-  //   return
-  // }
 }
 
 function strangeTaskAboutOddNumber() {
@@ -266,7 +262,6 @@ function factorial() {
       counter = counter * i;
     }
   }
-  console.log("fdsafadsf");
   enterResult(id, counter);
 }
 
@@ -274,14 +269,16 @@ function sumOfAllInputs() {
   let id = "task20";
   let result = 0;
   let allInputs = document.getElementsByClassName("result");
-  for (let i of allInputs) {
+  let allInputsArray = Array.from(allInputs);
+  allInputsArray.pop();
+  for (let i of allInputsArray) {
     if (isNaN(+i.innerHTML) == false) {
       result = result + +i.innerHTML;
     } else {
       if (i.innerHTML.indexOf(",") != -1) {
         let itIsAlreadyArray = i.innerHTML.split(",");
         for (let j = 0; j < itIsAlreadyArray.length; j++) {
-          result = result + j;
+          result = result + +itIsAlreadyArray[j];
         }
       }
     }
